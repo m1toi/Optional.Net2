@@ -4,7 +4,7 @@ namespace GameShop.Database.Repositories
 {
     public class BaseRepository
     {
-        protected GameShopDbContext _gameShopDbContext { get; set; }
+        protected readonly GameShopDbContext _gameShopDbContext;
 
         public BaseRepository(GameShopDbContext libraryDbContext)
         {

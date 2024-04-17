@@ -1,12 +1,24 @@
 ﻿using GameShop.Database.Context;
+using GameShop.Database.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace GameShop.Database.Repositories
 {
-    public class GameDeveloperRepository:BaseRepository,IGameDeveloperRepository
+    public class DeveloperRepository : BaseRepository, IDeveloperRepository
     {
-        public GameDeveloperRepository(GameShopDbContext gameShopDbContext):base(gameShopDbContext)
+        public DeveloperRepository(GameShopDbContext gameShopDbContext):base(gameShopDbContext)
         {
 
+        }
+
+        public List<GameDeveloper> GetDevelopers()
+        {
+            var developers = _gameShopDbContext.Developers
+                .Include(d => d.Games)
+                .AsNoTracking()
+                .ToList();
+
+            return developers;
         }
     }
 }
