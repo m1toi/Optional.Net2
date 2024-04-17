@@ -1,6 +1,9 @@
-﻿namespace GameShop.Database.Repositories
+﻿using GameShop.Database.Entities;
+
+namespace GameShop.Database.Repositories
 {
-    public interface IGameShopRepository
+    public interface IGameDeveloperRepository
     {
+        List<GameDeveloper> GetDevelopers();
     }
 }

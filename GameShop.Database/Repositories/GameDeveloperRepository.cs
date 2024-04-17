@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using GameShop.Database.Context;
 
 namespace GameShop.Database.Repositories
 {
-    internal class GameShopRepository
+    public class GameDeveloperRepository:BaseRepository,IGameDeveloperRepository
     {
+        public GameDeveloperRepository(GameShopDbContext gameShopDbContext):base(gameShopDbContext)
+        {
+
+        }
     }
 }
