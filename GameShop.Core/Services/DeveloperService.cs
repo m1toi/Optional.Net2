@@ -6,6 +6,10 @@ namespace GameShop.Core.Services
     {
         private readonly IDeveloperRepository _gameDeveloperRepository;
 
+        public DeveloperService(IDeveloperRepository gameDeveloperRepository)
+        {
+            this._gameDeveloperRepository = gameDeveloperRepository;
+        }
 
     }
 }

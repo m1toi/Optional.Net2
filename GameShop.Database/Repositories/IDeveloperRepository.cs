@@ -2,7 +2,7 @@
 
 namespace GameShop.Database.Repositories
 {
-    public interface IGameDeveloperRepository
+    public interface IDeveloperRepository
     {
         List<GameDeveloper> GetDevelopers();
     }
