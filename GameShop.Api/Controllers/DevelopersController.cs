@@ -1,4 +1,5 @@
-﻿using GameShop.Core.Services;
+﻿using GameShop.Core.Dtos.Response;
+using GameShop.Core.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GameShop.Api.Controllers
@@ -12,5 +13,12 @@ namespace GameShop.Api.Controllers
         {
             this._developerService = developerService;
         }
+
+        [HttpGet]
+        public ActionResult<List<DeveloperResponseDto>> GetDevelopers()
+        {
+            return Ok(_developerService.GetDevelopers());
+        }
     }
+    
 }
