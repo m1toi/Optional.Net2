@@ -12,7 +12,7 @@ builder.Services.AddSwaggerGen();
 
 var config = new ConfigurationBuilder()
     .SetBasePath(Directory.GetCurrentDirectory())
-    .AddJsonFile("appsettings.Development.json")
+    .AddJsonFile("appsettings.json")
     .Build();
 
 builder.Services.AddDbContext<GameShopDbContext>(
