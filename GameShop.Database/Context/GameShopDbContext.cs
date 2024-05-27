@@ -7,6 +7,9 @@ namespace GameShop.Database.Context
     {
         public DbSet<Game> Games { get; set; }
         public DbSet<GameDeveloper> Developers { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<Role> Roles { get; set; }
+
         public GameShopDbContext(DbContextOptions<GameShopDbContext> options) : base(options) { }
 
     }
