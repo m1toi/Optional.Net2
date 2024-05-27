@@ -1,6 +1,6 @@
 ﻿using GameShop.Database.Entities;
 
-namespace LibraryManagement.Core.Services
+namespace GameShop.Core.Services
 {
     public interface IAuthenticationService
     {

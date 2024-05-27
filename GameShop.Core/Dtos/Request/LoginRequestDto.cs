@@ -1,4 +1,4 @@
-﻿namespace LibraryManagement.Core.Dtos.Request
+﻿namespace GameShop.Core.Dtos.Request
 {
     public class LoginRequestDto
     {

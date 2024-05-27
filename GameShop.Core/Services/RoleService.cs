@@ -5,7 +5,7 @@ using GameShop.Core.Services;
 using GameShop.Database.Repositories;
 
 
-namespace LibraryManagement.Core.Services
+namespace GameShop.Core.Services
 {
     public class RoleService : IRoleService
     {

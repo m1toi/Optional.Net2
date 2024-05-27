@@ -1,6 +1,5 @@
 ﻿using GameShop.Core.Services;
 using GameShop.Database.Repositories;
-using LibraryManagement.Core.Services;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace GameShop.Core.Extensions

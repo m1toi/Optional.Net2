@@ -1,11 +1,10 @@
 ﻿using GameShop.Core.Dtos.Request;
 using GameShop.Core.Dtos.Response;
 using GameShop.Core.Services;
-using LibraryManagement.Core.Dtos.Request;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace LibraryManagement.Api.Controllers
+namespace GameShop.Api.Controllers
 {
     [Authorize(Roles = "Admin")]
     [Route("api/Users")]
@@ -20,7 +19,8 @@ namespace LibraryManagement.Api.Controllers
 
         [AllowAnonymous]
         [HttpPost("/register")]
-
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
 
         public IActionResult Register([FromBody] UserRequestDto user)
         {
@@ -37,6 +37,8 @@ namespace LibraryManagement.Api.Controllers
 
         [AllowAnonymous]
         [HttpPost("/login")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
 
         public ActionResult<string> Login([FromBody] LoginRequestDto login)
         {
@@ -53,11 +55,14 @@ namespace LibraryManagement.Api.Controllers
 
 
         [HttpGet]
+        [ProducesResponseType(StatusCodes.Status200OK)]
 
         public ActionResult<List<UserResponseDto>> GetAll()
         {
             return Ok(_userService.GetAll());
         }
-        
+
+
+      
     }
 }

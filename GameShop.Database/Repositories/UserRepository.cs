@@ -18,7 +18,15 @@ namespace GameShop.Database.Repositories
 
         public User GetUserByEmail(string email)
         {
-            var user = _gameShopDbContext.Users.FirstOrDefault(u => u.Email == email);
+            var user = _gameShopDbContext.Users
+                                        .Where(u => u.Email == email)
+                                        .Include(u => u.Role)
+                                        .FirstOrDefault();
+            if (user == null)
+            {
+                throw new Exception("User not found");
+            }
+
             return user;
         }
 
@@ -29,6 +37,7 @@ namespace GameShop.Database.Repositories
                 throw new Exception("User already exists");
             }
             _gameShopDbContext.Add(user);
+            SaveChanges();
         }
     }
     

@@ -5,7 +5,7 @@ using GameShop.Core.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace LibraryManagement.Api.Controllers
+namespace GameShop.Api.Controllers
 {
     [Authorize(Roles = "Admin")]
     [Route("api/Roles")]

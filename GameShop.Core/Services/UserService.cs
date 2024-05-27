@@ -4,10 +4,9 @@ using GameShop.Core.Mapping;
 using GameShop.Core.Services;
 using GameShop.Database.Entities;
 using GameShop.Database.Repositories;
-using LibraryManagement.Core.Dtos.Request;
 
 
-namespace LibraryManagement.Core.Services
+namespace GameShop.Core.Services
 {
     public class UserService : IUserService
     {
