@@ -20,7 +20,6 @@ namespace GameShop.Database.Repositories
         {
             var user = _gameShopDbContext.Users.FirstOrDefault(u => u.Email == email);
             return user;
-
         }
 
         public void RegisterUser(User user)
