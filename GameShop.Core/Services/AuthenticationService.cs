@@ -20,7 +20,7 @@ namespace LibraryManagement.Core.Services
         {
             List<Claim> claims = new List<Claim>
             {
-                new Claim(ClaimTypes.Username, user.Username),
+                new Claim(ClaimTypes.Name, user.Username),
                 new Claim(ClaimTypes.Role, user.Role.Name)
             };
 
