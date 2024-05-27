@@ -1,9 +1,11 @@
 ﻿using GameShop.Core.Dtos.Response;
 using GameShop.Core.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GameShop.Api.Controllers
 {
+    [Authorize]
     [Route("api/Developers")]
     public class DevelopersController : ControllerBase
     {

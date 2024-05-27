@@ -1,5 +1,6 @@
 ﻿using GameShop.Core.Services;
 using GameShop.Database.Repositories;
+using LibraryManagement.Core.Services;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace GameShop.Core.Extensions
@@ -10,6 +11,15 @@ namespace GameShop.Core.Extensions
         {
             services.AddScoped<IDeveloperService, DeveloperService>();
             services.AddScoped<IDeveloperRepository, DeveloperRepository>();
+
+            services.AddScoped<IAuthenticationService, AuthenticationService>();
+
+            services.AddScoped<IRoleService, RoleService>();
+            services.AddScoped<IRoleRepository, RoleRepository>();
+
+            services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IUserRepository, UserRepository>();
+
         }
     }
 }

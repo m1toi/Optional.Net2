@@ -20,7 +20,7 @@ namespace GameShop.Core.Mapping
         {
             return roles.Select(role => role.ToRoleResponseDto()).ToList(); 
         }   
-        public static Role ToRole(this RoleRequestDto roleRequestDto)
+        public static Role MapToRole(this RoleRequestDto roleRequestDto)
         {
             var result = new Role   
             {
