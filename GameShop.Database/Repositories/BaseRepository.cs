@@ -6,9 +6,9 @@ namespace GameShop.Database.Repositories
     {
         protected readonly GameShopDbContext _gameShopDbContext;
 
-        public BaseRepository(GameShopDbContext libraryDbContext)
+        public BaseRepository(GameShopDbContext gameShopDbContext)
         {
-            this._gameShopDbContext = libraryDbContext;
+            this._gameShopDbContext = gameShopDbContext;
         }
 
         public void SaveChanges()
